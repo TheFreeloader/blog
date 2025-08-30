@@ -1,0 +1,16 @@
+{
+  "success": true,
+  "data": {
+    "projects": [
+      {
+        "id": "7086",
+        "name": "Construction of Hibago Flood Control, Ocampo, Camarines Sur",
+        "location": "CAMARINES SUR",
+        "corporation": "FP5 CONSTRUCTION & DEVELOPMENT CORPORATION (FORMERLY: JS & V ENTERPRISES GENERAL CONTRACTOR, INC.) / PHILWORKS CONSTRUCTION & SUPPLY",
+        "cost": "48,463,641.53",
+        "completionDate": "07/04/2024",
+        "contractId": "23FF0054"
+      }
+    ]
+  }
+}
