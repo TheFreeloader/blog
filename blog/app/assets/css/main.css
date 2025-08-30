@@ -1,5 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Notable&family=Poppins:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Notable&family=Poppins:wght@400;600;700&display=swap");
 @import "tailwindcss";
-
 @theme {
   /* Polar Light */
   --color-nord-0: #2e3440;
@@ -75,5 +76,14 @@
   body {
     background-color: var(--background);
     color: var(--foreground);
+  }
+}
+@layer utilities {
+  .font-notable {
+    font-family: "Notable", sans-serif;
+    font-weight: 400;
+  }
+  .font-poppins {
+    font-family: "Poppins", sans-serif;
   }
 }
