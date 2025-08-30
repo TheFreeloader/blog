@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@theme {
+  --color-nord-0: #2e3440;
+  --color-nord-1: #3b4252;
+  --color-nord-2: #434c5e;
+  --color-nord-3: #4c566a;
+  --color-nord-4: #d8dee9;
+  --color-nord-5: #e5e9f0;
+  --color-nord-6: #eceff4;
+  --color-nord-7: #8fbcbb;
+  --color-nord-8: #88c0d0;
+  --color-nord-9: #81a1c1;
+  --color-nord-10: #5e81ac;
+  --color-nord-11: #bf616a;
+  --color-nord-12: #d08770;
+  --color-nord-13: #ebcb8b;
+  --color-nord-14: #a3be8c;
+  --color-nord-15: #b48ead;
+}
+
+:root {
+  --tw-dark-mode: class;
+}
+
+@layer base {
+  :root {
+    --background: var(--color-nord-6);
+    --foreground: var(--color-nord-0);
+    --muted: var(--color-nord-4);
+    --muted-foreground: var(--color-nord-3);
+    --popover: var(--color-nord-6);
+    --popover-foreground: var(--color-nord-0);
+    --card: var(--color-nord-5);
+    --card-foreground: var(--color-nord-0);
+    --border: var(--color-nord-4);
+    --input: var(--color-nord-5);
+    --primary: var(--color-nord-8);
+    --primary-foreground: var(--color-nord-0);
+    --secondary: var(--color-nord-4);
+    --secondary-foreground: var(--color-nord-0);
+    --accent: var(--color-nord-7);
+    --accent-foreground: var(--color-nord-0);
+    --destructive: var(--color-nord-11);
+    --destructive-foreground: var(--color-nord-6);
+    --ring: var(--color-nord-8);
+  }
+
+  .dark {
+    --background: var(--color-nord-0);
+    --foreground: var(--color-nord-6);
+    --muted: var(--color-nord-3);
+    --muted-foreground: var(--color-nord-4);
+    --popover: var(--color-nord-0);
+    --popover-foreground: var(--color-nord-6);
+    --card: var(--color-nord-1);
+    --card-foreground: var(--color-nord-6);
+    --border: var(--color-nord-3);
+    --input: var(--color-nord-1);
+    --primary: var(--color-nord-8);
+    --primary-foreground: var(--color-nord-0);
+    --secondary: var(--color-nord-3);
+    --secondary-foreground: var(--color-nord-6);
+    --accent: var(--color-nord-7);
+    --accent-foreground: var(--color-nord-0);
+    --destructive: var(--color-nord-11);
+    --destructive-foreground: var(--color-nord-6);
+    --ring: var(--color-nord-8);
+  }
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+  }
+}
+
+
