@@ -86,4 +86,13 @@
   .font-poppins {
     font-family: "Poppins", sans-serif;
   }
+  .bg-theme {
+    background-color: var(--background);
+  }
+  .text-theme {
+    color: var(--foreground);
+  }
+  .border-theme {
+    border-color: var(--border);
+  }
 }

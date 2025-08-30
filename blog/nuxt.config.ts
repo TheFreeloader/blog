@@ -1,3 +1,4 @@
+import { resolve } from "path";
 import tailwindcss from "@tailwindcss/vite";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
