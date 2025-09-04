@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Notable&family=Poppins:wght@400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Notable&family=Poppins:wght@400;600;700&display=swap");
 @import "tailwindcss";
+
 @theme {
   /* Dark Theme Colors */
   --color-nord-0: #2e3440;
@@ -17,6 +18,21 @@
   --color-nord-7: #8fbcbb;
   --color-nord-8: #88c0d0;
   --color-nord-9: #81a1c1;
+
+  /* Custom theme colors for Tailwind */
+  --color-background: var(--color-nord-0);
+  --color-foreground: var(--color-nord-6);
+  --color-primary: var(--color-nord-4);
+  --color-primary-foreground: var(--color-nord-0);
+  --color-secondary: var(--color-nord-2);
+  --color-secondary-foreground: var(--color-nord-6);
+  --color-accent: var(--color-nord-5);
+  --color-accent-foreground: var(--color-nord-0);
+  --color-muted: var(--color-nord-3);
+  --color-muted-foreground: var(--color-nord-4);
+  --color-card: var(--color-nord-1);
+  --color-card-foreground: var(--color-nord-6);
+  --color-border: var(--color-nord-3);
 }
 
 :root {
@@ -25,22 +41,22 @@
 
 @layer base {
   :root {
-    --background: var(--color-nord-0);
-    --foreground: var(--color-nord-6);
-    --muted: var(--color-nord-3);
-    --muted-foreground: var(--color-nord-4);
+    --background: var(--color-background);
+    --foreground: var(--color-foreground);
+    --muted: var(--color-muted);
+    --muted-foreground: var(--color-muted-foreground);
     --popover: var(--color-nord-0);
     --popover-foreground: var(--color-nord-6);
-    --card: var(--color-nord-1);
-    --card-foreground: var(--color-nord-6);
-    --border: var(--color-nord-3);
+    --card: var(--color-card);
+    --card-foreground: var(--color-card-foreground);
+    --border: var(--color-border);
     --input: var(--color-nord-1);
-    --primary: var(--color-nord-4);
-    --primary-foreground: var(--color-nord-0);
-    --secondary: var(--color-nord-2);
-    --secondary-foreground: var(--color-nord-6);
-    --accent: var(--color-nord-5);
-    --accent-foreground: var(--color-nord-0);
+    --primary: var(--color-primary);
+    --primary-foreground: var(--color-primary-foreground);
+    --secondary: var(--color-secondary);
+    --secondary-foreground: var(--color-secondary-foreground);
+    --accent: var(--color-accent);
+    --accent-foreground: var(--color-accent-foreground);
     --destructive: var(--color-nord-1);
     --destructive-foreground: var(--color-nord-6);
     --ring: var(--color-nord-2);
@@ -55,6 +71,20 @@
     background-color: var(--background);
     color: var(--foreground);
     min-height: 100vh;
+    scroll-behavior: smooth;
+  }
+  
+  /* Responsive Typography */
+  h1 { @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl; }
+  h2 { @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl; }
+  h3 { @apply text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl; }
+  h4 { @apply text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl; }
+  h5 { @apply text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl; }
+  h6 { @apply text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl; }
+  
+  /* Mobile-first responsive containers */
+  .container {
+    @apply w-full mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20;
   }
 }
 @layer utilities {
@@ -73,5 +103,105 @@
   }
   .border-theme {
     border-color: var(--border);
+  }
+  
+  /* Custom color utilities */
+  .text-primary { color: var(--primary); }
+  .bg-primary { background-color: var(--primary); }
+  .border-primary { border-color: var(--primary); }
+  
+  .text-secondary { color: var(--secondary); }
+  .bg-secondary { background-color: var(--secondary); }
+  .border-secondary { border-color: var(--secondary); }
+  
+  .text-accent { color: var(--accent); }
+  .bg-accent { background-color: var(--accent); }
+  .border-accent { border-color: var(--accent); }
+  
+  .text-muted { color: var(--muted); }
+  .bg-muted { background-color: var(--muted); }
+  .border-muted { border-color: var(--muted); }
+  
+  .text-card { color: var(--card); }
+  .bg-card { background-color: var(--card); }
+  .border-card { border-color: var(--card); }
+  
+  .text-foreground { color: var(--foreground); }
+  .text-muted-foreground { color: var(--muted-foreground); }
+  .text-primary-foreground { color: var(--primary-foreground); }
+  .text-secondary-foreground { color: var(--secondary-foreground); }
+  .text-accent-foreground { color: var(--accent-foreground); }
+  .text-card-foreground { color: var(--card-foreground); }
+  
+  /* Custom responsive utilities */
+  .container-responsive {
+    @apply px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20;
+  }
+  
+  .text-responsive-sm {
+    @apply text-xs sm:text-sm md:text-base lg:text-lg;
+  }
+  
+  .text-responsive-md {
+    @apply text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl;
+  }
+  
+  .text-responsive-lg {
+    @apply text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl;
+  }
+  
+  .text-responsive-xl {
+    @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl;
+  }
+  
+  .spacing-responsive {
+    @apply p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12;
+  }
+  
+  .gap-responsive {
+    @apply gap-2 sm:gap-3 md:gap-4 lg:gap-5 xl:gap-6;
+  }
+  
+  /* Typewriter cursor animation */
+  .cursor {
+    animation: blink 1s infinite;
+    @apply text-primary;
+  }
+  
+  @keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+  }
+  
+  /* Mobile-optimized transitions */
+  .mobile-touch {
+    @apply active:scale-95 transition-transform duration-150;
+  }
+  
+  /* Responsive hover effects (only on devices that support hover) */
+  @media (hover: hover) {
+    .hover-lift:hover {
+      @apply transform -translate-y-1 shadow-lg transition-all duration-300;
+    }
+  }
+  
+  /* Mobile-friendly scrollbar */
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: var(--muted) var(--background);
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: var(--background);
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--muted);
+    border-radius: 3px;
   }
 }
