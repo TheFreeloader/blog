@@ -403,7 +403,8 @@ const error = ref(null)
 
 onMounted(async () => {
      try {
-          const res = await fetch('/api/get/projects')
+          // Option 2: Fetch directly from public directory (bypasses API entirely)
+          const res = await fetch('/dataset.json')
           const json = await res.json()
           let all = []
           if (json && json.success && json.data && Array.isArray(json.data.projects)) {
