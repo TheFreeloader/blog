@@ -2,18 +2,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Notable&family=Poppins:wght@400;600;700&display=swap");
 @import "tailwindcss";
 @theme {
-  /* Polar Light */
+  /* Dark Theme Colors */
   --color-nord-0: #2e3440;
   --color-nord-1: #3b4252;
   --color-nord-2: #434c5e;
   --color-nord-3: #4c566a;
 
-  /* Snow Storm */
+  /* Light Accent Colors */
   --color-nord-4: #d8dee9;
   --color-nord-5: #e5e9f0;
   --color-nord-6: #eceff4;
 
-  /* Frost */
+  /* Frost Accent Colors */
   --color-nord-7: #8fbcbb;
   --color-nord-8: #88c0d0;
   --color-nord-9: #81a1c1;
@@ -25,28 +25,6 @@
 
 @layer base {
   :root {
-    --background: var(--color-nord-7);
-    --foreground: var(--color-nord-6);
-    --muted: var(--color-nord-5);
-    --muted-foreground: var(--color-nord-3);
-    --popover: var(--color-nord-8);
-    --popover-foreground: var(--color-nord-4);
-    --card: var(--color-nord-9);
-    --card-foreground: var(--color-nord-4);
-    --border: var(--color-nord-4);
-    --input: var(--color-nord-5);
-    --primary: var(--color-nord-8);
-    --primary-foreground: var(--color-nord-6);
-    --secondary: var(--color-nord-5);
-    --secondary-foreground: var(--color-nord-0);
-    --accent: var(--color-nord-7);
-    --accent-foreground: var(--color-nord-6);
-    --destructive: var(--color-nord-1);
-    --destructive-foreground: var(--color-nord-6);
-    --ring: var(--color-nord-9);
-  }
-
-  .dark {
     --background: var(--color-nord-0);
     --foreground: var(--color-nord-6);
     --muted: var(--color-nord-3);
@@ -73,9 +51,10 @@
   * {
     border-color: var(--border);
   }
-  body {
+  html, body {
     background-color: var(--background);
     color: var(--foreground);
+    min-height: 100vh;
   }
 }
 @layer utilities {

@@ -1,5 +1,5 @@
 <template>
-     <div>
+     <div class="min-h-screen bg-background text-foreground">
           <Navbar />
           <div class="pt-16">
                <slot />
